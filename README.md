@@ -4,6 +4,8 @@ Display CPU usage app build on electron js.
 
 ## App Demo
 
+![App Demo](https://github.com/kmhmubin/CPU-Usage-Monitor-App/blob/master/App%20Demo.png)
+
 
 ## Installation ⚙
 
