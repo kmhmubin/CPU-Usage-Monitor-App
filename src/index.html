@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cpu Monitor</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div class="box">
+    <span class="label">CPU (%)</span>
+    <span id="cpu">-</span>
+  </div>
+  <div class="box">
+    <span class="label">Free Mem (%)</span>
+    <span id="mem">-</span>
+  </div>
+  <div class="box">
+    <span class="label">Total Mem (GB)</span>
+    <span id="total-mem">-</span>
+  </div>
+  <script>
+    const electron = require('electron');
+    const ipcRenderer = electron.ipcRenderer;
+
+    ipcRenderer.on('cpu', (event, data) => {
+      document.getElementById('cpu').innerHTML = data.toFixed(2);
+    });
+    ipcRenderer.on('mem', (event, data) => {
+      document.getElementById('mem').innerHTML = data.toFixed(2);
+    });
+    ipcRenderer.on('total-mem', (event, data) => {
+      document.getElementById('total-mem').innerHTML = data.toFixed(2);
+    });
+  </script>
+</body>
+
+</html>
