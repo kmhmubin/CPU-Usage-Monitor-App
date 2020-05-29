@@ -12,24 +12,24 @@
     "lint": "echo \"No linting configured\"",
     "build-installer": "electron-builder"
   },
-"build": {
-  "appId": "cpu-monitor",
-  "win": {
-    "target": [
-      "nsis"
-    ],
-    "icon": "src/icon.ico",
-    "requestedExecutionLevel": "requireAdministrator"
+  "build": {
+    "appId": "cpu-monitor",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/icon.ico",
+      "uninstallerIcon": "src/icon.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "license": "LICENSE",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
-  "nsis": {
-    "installerIcon": "src/icon.ico",
-    "uninstallerIcon": "src/icon.ico",
-    "uninstallDisplayName": "CPU Monitor",
-    "license": "license.txt",
-    "oneClick": false,
-    "allowToChangeInstallationDirectory": true
-  }
-},
   "keywords": [],
   "author": "K.M.H.Mubin <52270073+kmhmubin@users.noreply.github.com>",
   "license": "MIT",
